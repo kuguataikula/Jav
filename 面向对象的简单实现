@@ -1,0 +1,41 @@
+public class Static_Tset {
+    public static void main(String[] args){
+        System.out.println("-----------------------------------------------------------------");
+        //TODO 类只能调用自生创建的静态方法和静态变量，不能调用普通方法和普通变量
+        //TODO 静态方法与变量只与类有关
+        //pig.HaveDreamPig();
+        pig.sleep();
+        System.out.println(pig.name);
+        //System.out.println(pig.name1);
+        System.out.println("-----------------------------------------------------------------");
+        //TODO 代码块在每次执行时都会先执行一次
+        pig p = new pig();
+        p.name1 = "方法！！！\n";
+        p.HaveDreamPig();
+        System.out.println("-----------------------------------------------------------------");
+        //TODO 类创建的对象可以调用静态方法和静态变量，但不能对变量进行修改
+        pig p1 = new pig();
+        p1.sleep();
+        System.out.println(p1.name);
+        //p1.name;
+        System.out.println("-----------------------------------------------------------------");
+
+    }
+}
+
+class pig{
+    static String name = "静态变量！！！";
+    String name1;
+    static void sleep(){
+        System.out.println("静态方法！！！\n");
+    }
+    void HaveDreamPig(){
+        System.out.println(name1);
+    }
+    static {
+        System.out.println("静态代码块！！\n");
+    }
+    {
+        System.out.println("代码块！！！\n");
+    }
+}

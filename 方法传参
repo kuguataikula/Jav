@@ -1,0 +1,24 @@
+public class By_Value {
+    public static void main(String[] args){
+        student s = new student();
+        //ToDo 面向对象 方法 传参
+        //基本数据类型：数值
+        //引用数据类型：地址
+        s.name = "jack";
+        String s1 = "abc";
+        update1(s);
+        update2(s1);
+        System.out.println(s.name);
+        System.out.println(s1);
+    }
+    public static void update1(student s){
+        s.name = "lily";
+    }
+    public static void update2(String s1){
+        s1 = s1+10;
+    }
+
+}
+class student{
+    String name;
+}

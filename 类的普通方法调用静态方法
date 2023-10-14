@@ -1,0 +1,23 @@
+public class Static_Test2 {
+    public static void main(String[] args){
+        Chinese c = new Chinese();
+        c.sex = "女";
+        c.Test();
+        c.Test1();
+    }
+}
+class Chinese {
+    static String sex = "男";
+    String name;
+    void Test(){
+        Test1();
+        System.out.println(sex);
+        System.out.println("Test...");
+    }
+    static void Test1(){
+        //Test();
+        //TODO 静态方法不能调用普通方法和变量
+        //System.out.println(name);
+        System.out.println("Test1");
+    }
+}

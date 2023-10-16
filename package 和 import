@@ -1,0 +1,21 @@
+package Bag_Test_class;
+
+public class Bagtest {
+    public static void main(String[] args){
+
+    }
+    public void sleep1() {
+        System.out.println("猪会睡觉！！！");
+    }
+}
+
+
+package everyday_code.package1;
+import Bag_Test_class.*;
+public class Bag {
+    public static void main(String[] args){
+        Bagtest p = new Bagtest();
+        p.sleep1();
+    }
+
+}

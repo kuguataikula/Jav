@@ -1,0 +1,29 @@
+package everyday_code;
+
+public class ThisAndSuper {
+    public static void main(String[] args){
+        Son1 s = new Son1();
+        s.Prints();
+    }
+
+}
+class Parent{
+    String name = "张三";
+    public Parent() {
+        System.out.println("父类");
+    }
+}
+class Son1 extends Parent{
+    String name = "李四";
+
+    void Prints(){
+        System.out.println(this.name);
+        System.out.println(super.name);
+    }
+    {
+        System.out.println("代码块"+name);
+    }
+    static {
+        System.out.println("静态代码块");
+    }
+}

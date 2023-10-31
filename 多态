@@ -1,0 +1,27 @@
+public class Duotai {
+    public static void main(String[] args){
+        Person p1 = new Boy();
+        Person p2 = new Girl();
+        Boy p3 = new Boy();
+        p1.testPerson();
+        //p1.testBoy();
+        p2.testPerson();
+        //p2.testGirl();
+        p3.testBoy();
+    }
+}
+class Person{
+    void testPerson(){
+        System.out.println("Person...");
+    }
+}
+class Boy extends Person{
+    void testBoy(){
+        System.out.println("Boy...");
+    }
+}
+class Girl extends Person{
+    void testGirl(){
+        System.out.println("Girl...");
+    }
+}
